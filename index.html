@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="./favicon.png" type="image/png">
+
+    <title>MovieBox</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="app">
+        <header class="topbar">
+            <h1>
+                <img src="./favicon.png" alt="MovieBox Logo" class="logo">
+                <span>MovieBox</span>
+            </h1>
+            <input id="search" class="search" placeholder="Search movies..." />
+            <div class="row">
+                <button id="tab-browse">Browse</button>
+                <button id="tab-list" class="ghost">Watchlist (0)</button>
+            </div>
+        </header>
+
+        <div id="chips" class="chips"></div>
+
+        <h2 id="section-title" class="section-title"></h2>
+        <p id="error" class="error" hidden></p>
+        <p id="empty" class="muted" hidden></p>
+
+        <div id="grid" class="movie-grid"></div>
+
+        <p id="loading" class="muted center" hidden>Loading...</p>
+        <button id="load-more" class="load-more" hidden>Load more</button>
+           <footer class="footer">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-col brand-col">
+          <div class="footer-brand"><span class="logo"></span> MovieBox</div>
+          <p class="footer-text">
+            Discover trending movies, explore details and build your own watchlist. Made for movie lovers.
+          </p>
+          <div class="socials">
+            <a href="#" data-fake aria-label="Twitter">𝕏</a>
+            <a href="#" data-fake aria-label="Instagram">IG</a>
+            <a href="#" data-fake aria-label="YouTube">YT</a>
+            <a href="#" data-fake aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#" data-fake>Home</a>
+          <a href="#" data-fake>Trending</a>
+          <a href="#" data-fake>My Watchlist</a>
+          <a href="#" data-fake>About Us</a>
+          <a href="#" data-fake>Blog</a>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <a href="#" data-fake>Action</a>
+          <a href="#" data-fake>Comedy</a>
+          <a href="#" data-fake>Drama</a>
+          <a href="#" data-fake>Sci-Fi</a>
+          <a href="#" data-fake>Horror</a>
+        </div>
+
+        <!-- Contact + newsletter -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p class="info">📍 123 Cinema Street, Karachi, Pakistan</p>
+          <p class="info">✉️ hello@moviebox.com</p>
+          <p class="info">📞 +92 300 1234567</p>
+
+          <form class="newsletter" id="newsletter">
+            <input type="email" id="news-email" placeholder="Your email" required />
+            <button>Subscribe</button>
+          </form>
+          <p class="news-msg" id="news-msg" hidden></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© <span id="year"></span> MovieBox. All rights reserved.</p>
+        <div class="legal">
+          <a href="#" data-fake>Privacy Policy</a>
+          <a href="#" data-fake>Terms of Service</a>
+          <a href="#" data-fake>Cookie Policy</a>
+          <a href="#" id="back-to-top">Back to top ↑</a>
+        </div>
+      </div>
+
+      <p class="footer-credit">
+        This product uses the TMDB API but is not endorsed or certified by TMDB.
+      </p>
+    </footer>
+    </div>
+    <!-- Details popup -->
+    <div id="overlay" class="overlay" hidden>
+        <div id="modal" class="modal"></div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
